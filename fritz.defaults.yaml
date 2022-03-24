@@ -132,72 +132,77 @@ skyportal:
       token:
 
     sidebar:
-      # See https://material-ui.com/components/material-icons/
+      - name: main
+        subitems:
+          - name: Dashboard
+            icon: Home
+            url: /
 
-      - name: Dashboard
-        icon: Home
-        url: /
+          - name: Sources
+            icon: Storage
+            url: /sources
 
-      - name: Sources
-        icon: Storage
-        url: /sources
+          - name: Candidates
+            icon: Search
+            url: /candidates
 
-      - name: Candidates
-        icon: Search
-        url: /candidates
+          - name: Favorites
+            icon: Star
+            url: /favorites
 
-      - name: Favorites
-        icon: Star
-        url: /favorites
+          - name: Groups
+            icon: GroupWork
+            url: /groups
 
-      - name: Alerts
-        icon: Explore
-        url: /alerts
+          - name: Observing Runs
+            icon: LocalCafe
+            url: /runs
 
-      - name: Archive
-        icon: CloudCircle
-        url: /archive
+          - name: GCN Events
+            icon: SettingsInputAntenna
+            url: /gcn_events
 
-      - name: Groups
-        icon: GroupWork
-        url: /groups
+          - name: Followup Requests
+            icon: WorkOutlined
+            url: /followup_requests
 
-      - name: Observing Runs
-        icon: LocalCafe
-        url: /runs
+          - name: Shifts
+            icon: SubwayRounded
+            url: /shifts
 
-      - name: GCN Events
-        icon: SettingsInputAntenna
-        url: /gcn_events
+          - name: About
+            icon: Info
+            url: /about
 
-      - name: Telescopes
-        icon: MyLocation
-        url: /telescopes
+      - name: Other
+        subitems:
+          - name: Telescopes
+            icon: MyLocation
+            url: /telescopes
 
-      - name: Instruments
-        icon: Wifi
-        url: /instruments
+          - name: Instruments
+            icon: Wifi
+            url: /instruments
 
-      - name: Allocations
-        icon: HourglassEmptyOutlined
-        url: /allocations
+          - name: Allocations
+            icon: HourglassEmptyOutlined
+            url: /allocations
 
-      - name: Observations
-        icon: ZoomInOutlined
-        url: /observations
+          - name: Observations
+            icon: ZoomInOutlined
+            url: /observations
 
-      - name: Followup Requests
-        icon: WorkOutlined
-        url: /followup_requests
-
-      - name: Shifts
-        icon: SubwayRounded
-        url: /shifts
-
-      - name: About
-        icon: Info
-        url: /about
-
+      - name: Admin
+        permissions: ["Manage users", "System admin"]
+        subitems:
+          - name: DB Stats
+            icon: Assessment
+            permissions: ["System admin"]
+            url: /db_stats
+          - name: User Management
+            icon: Group
+            permissions: ["Manage users", "System admin"]
+            url: /user_management
 
     security:
       strict: true
